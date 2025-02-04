@@ -1,5 +1,77 @@
+:root {
+    --background-color: #F8FAFC;
+    --button-backgroundColor: #FBFBFB; 
+    --display-backgroundColor: #D9EAFD; 
+    --operator-backgroundColor: /*#F3C623*/ #c4c2bb;; 
+    --text-color: #181C14; 
+    --clear-backgroundColor: #E55604;  
+    --border-color: #ECEBDE; 
+    --equal-backgroundColor: /*#AAB99A #8C8BB2 #A5ACBD*/ #667aa9;
+    --clear-text-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Noto Sans Math';
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    color: var(--text-color); 
+}
+
+.calculator-container {
+    width: 50%;
+    margin-top: 8%;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+.text {
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    border: 1px solid var(--border-color);
+    height: 10vh;
+    width: 100%;
+    background-color: var(--display-backgroundColor);
+}
+
+.buttons-container {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+     margin: 2%;
+}
+.btn {
+    height: 10vh;
+    font-size: 1.5em;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--button-backgroundColor);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.clear {
+ background-color: var(--clear-backgroundColor);
+ color: var(--clear-text-color);
+}
+
+.equal {
+    grid-column: span 3;
+    background-color: var(--equal-backgroundColor);
+    color: var(--clear-text-color);
+}
+
+.operator {
+    background-color: var(--operator-backgroundColor);
+}
+
+.zero {
+    grid-column: span 2;
 }

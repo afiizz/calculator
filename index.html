@@ -3,30 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="calculator.css">
         <title>Calculator App</title>
     </head>
     <body>
-        <h1>Calculator App</h1>
-        <div class="Calculator">
+        <h1></h1>
+        <div class="calculator-container">
             <input class="text" type="text" disabled>
-            <div class="buttons">
+            <div class="buttons-container">
                 <button class="btn" aria-label="Seven">7</button>
                 <button class="btn" aria-label="Eight">8</button>
                 <button class="btn" aria-label="Nine">9</button>
-                <button class="btn" aria-label="Divide">/</button>
+                <button class="btn clear" aria-label="Clear">C</button>
                 <button class="btn" aria-label="Four">4</button>
                 <button class="btn" aria-label="Five">5</button>
                 <button class="btn" aria-label="Six">6</button>
-                <button class="btn" aria-label="Multiply">*</button>
+                <button class="btn operator" aria-label="Divide">/</button>
                 <button class="btn" aria-label="One">1</button>
                 <button class="btn" aria-label="Two">2</button>
                 <button class="btn" aria-label="Three">3</button>
-                <button class="btn" aria-label="Add">+</button>
-                <button class="btn" aria-label="Zero">0</button>
+                <button class="btn operator" aria-label="Multiply">*</button>
+                <button class="btn zero" aria-label="Zero">0</button>
                 <button class="btn" aria-label="Decimal">.</button>
-                <button class="btn" aria-label="Equals">=</button>
-                <button class="btn" aria-label="Substract">-</button>
+                <button class="btn operator" aria-label="Add">+</button>
+                <button class="btn equal" aria-label="Equals">=</button>
+                <button class="btn operator" aria-label="Substract">-</button>
             </div>
         </div>
     </body>
