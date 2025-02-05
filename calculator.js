@@ -24,7 +24,6 @@ function subtract(a, b) {
 } 
 
 
-
 function operate( operator, num1, num2) {
 
     if (operator === "" || isNaN(num1) || isNaN(num2)) {
