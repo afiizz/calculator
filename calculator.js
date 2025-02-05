@@ -73,10 +73,14 @@ document.querySelectorAll(".btn").forEach(button => {
         //if The button is a number or decimal
         if(!isNaN(value) || value === ".") {
             if (!operator) {
+                if ( value === "." && firstNumber.includes("."))
+                    return; 
                 firstNumber += value
                 display.value = firstNumber;
 
             } else {
+                if (value === "." && secondNumber.includes("."))
+                    return;
                 secondNumber += value;
                 display.value = firstNumber + " " + operator + " " + secondNumber;
             }         
