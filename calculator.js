@@ -141,6 +141,25 @@ document.querySelectorAll(".btn").forEach(button => {
         }
 
 
+        if (button.classList.contains("backspace")) {
+            if(!operator) {
+
+                firstNumber = firstNumber.slice(0, -1);
+                display.value = firstNumber || "0";
+
+            } else if (operator && !secondNumber) {
+                operator = "";
+                display.value = firstNumber;
+
+            } else {
+                secondNumber = secondNumber.slice(0, -1);
+                display.value = firstNumber + " " + operator + " " + secondNumber;
+            }
+
+         }
+
+        
+
 
         button.addEventListener("mousedown", () => {
             button.classList.add("clicked");
