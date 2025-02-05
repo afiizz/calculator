@@ -32,7 +32,7 @@ body {
     border-radius: 5px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
 }
-.text {
+.display {
     text-align: center;
     font-size: 1.5em;
     border-radius: 5px;
@@ -56,17 +56,20 @@ body {
     border: 1px solid var(--border-color);
     background-color: var(--button-backgroundColor);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
 }
 .clear {
  background-color: var(--clear-backgroundColor);
- color: var(--clear-text-color);
+ color: var(--text-color);
 }
+
 
 .equal {
     grid-column: span 3;
     background-color: var(--equal-backgroundColor);
-    color: var(--clear-text-color);
-}
+    color: var(--text-color);
+} 
 
 .operator {
     background-color: var(--operator-backgroundColor);
@@ -75,3 +78,11 @@ body {
 .zero {
     grid-column: span 2;
 }
+
+.clicked {
+    transform: scale(0.9); /* Button shrinks when clicked */
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter color */
+
+}
+
+
