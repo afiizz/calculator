@@ -67,6 +67,7 @@ let operator = "";
 let display = document.querySelector('.display');
 
 document.querySelectorAll(".btn").forEach(button => {
+
     button.addEventListener("click", () => {
         let value = button.textContent;
 
@@ -156,10 +157,7 @@ document.querySelectorAll(".btn").forEach(button => {
                 display.value = firstNumber + " " + operator + " " + secondNumber;
             }
 
-         }
-
-        
-
+        }
 
         button.addEventListener("mousedown", () => {
             button.classList.add("clicked");
