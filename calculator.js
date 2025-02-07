@@ -1,3 +1,5 @@
+
+
 function divide(a, b) {
     if (b === 0) {
         return "Error";   
@@ -20,7 +22,7 @@ function subtract(a, b) {
 
 function operate(operator, num1, num2) {
     if (operator === "" || isNaN(num1) || isNaN(num2)) {
-        return "Error";  // Prevents Undefined or Null cases
+        return "Error";  
     }
 
     let result;
@@ -63,7 +65,6 @@ document.querySelectorAll(".btn").forEach(button => {
     button.addEventListener("click", () => {
         let value = button.textContent;
 
-        //if The button is a number or decimal
         if (!isNaN(value) || value === ".") {
             if (!operator) {
                 if (value === "." && firstNumber.includes("."))
@@ -78,7 +79,6 @@ document.querySelectorAll(".btn").forEach(button => {
             }
         }
 
-        //if the button is an operator not a =
         if (button.classList.contains("operator") && value !== "=") {
             if (firstNumber && secondNumber) {
 
@@ -104,7 +104,6 @@ document.querySelectorAll(".btn").forEach(button => {
 
         }
 
-        //if the button is "=" Calculate result
         if (value === "=") {
             if (firstNumber && secondNumber && operator) {
                 let result = operate(operator, Number(firstNumber), Number(secondNumber));
@@ -158,11 +157,11 @@ document.querySelectorAll(".btn").forEach(button => {
 
 });
 
-// Keyboard functions
+
+
 document.addEventListener('keydown', (e) => {
     const key = e.key;
 
-    // Verifies if it is a number or an operator
     if (key >= 0 && key <= 9 || key === '+' || key === '-' || key === '*' || key === '/' || key === '.') {
         const button = Array.from(document.querySelectorAll(".btn")).find(btn => btn.textContent === key);
         if (button) {
@@ -170,25 +169,17 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
-    // // If press enter, calculates the result
-    // if (key === 'Enter') {
-    //     const equalsButton = document.querySelector(".btn.equals");
-    //     if (equalsButton) equalsButton.click();
-    // }
 
-    // If press backspace, deletes the last digit
     if (key === 'Backspace') {
         const backspaceButton = document.querySelector(".btn.backspace");
         if (backspaceButton) backspaceButton.click();
     }
 
-    // If press esc, deletes all
     if (key === 'Escape') {
         const clearButton = document.querySelector(".btn.clear");
         if (clearButton) clearButton.click();
     }
 
-    //Si se presiona enter se hace el igual
     if (key === 'Enter') {
         const equalsButton = document.querySelector(".btn.equal"); // Asume que el botón igual tiene el valor "="
         if (equalsButton) equalsButton.click();
